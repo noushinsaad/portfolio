@@ -21,20 +21,16 @@ const HeroSection = () => {
                     I craft and code with a focus on simplicity and elegance, embracing every moment of the journey.
                     <br /> Just starting out, but loving every step!
                 </p>
-                <button className="btn btn-wide rounded-full mt-6">
-                    <a
-                        href="/resume.pdf"
-                        download="My_Resume.pdf" 
-                        className="text-green-800"
-                    >
-                        Download Resume
-                    </a>
-                </button>
+
+                <a
+                    href="/resume.pdf"
+                    download="My_Resume.pdf"
+                    className="text-green-800  btn btn-wide rounded-full mt-6"
+                >
+                    Download Resume
+                </a>
+
             </div>
-
-
-
-
         </div>
     );
 };
