@@ -36,16 +36,16 @@ const ContactCard = () => {
             <div className="border-t border-gray-700 mt-6 pt-4 text-center">
                 <p className="text-sm mb-4">&copy; 2024 Sa&apos;ad All Rights Reserved</p>
                 <div className="flex justify-center gap-4 text-xl mb-4">
-                    <a href="#" className="hover:text-green-400">
+                    <a href="https://github.com/noushinsaad" className="hover:text-green-400">
                         <FaGithub className="text-2xl" />
                     </a>
-                    <a href="#" className="hover:text-green-400">
+                    <a href="https://www.linkedin.com/in/md-noushin-islam-sa-ad/" className="hover:text-green-400">
                         <FiLinkedin className="text-2xl" />
                     </a>
-                    <a href="#" className="hover:text-green-400">
+                    <a href="https://www.facebook.com/noushinislam.saad0205/" className="hover:text-green-400">
                         <SlSocialFacebook className="text-2xl" />
                     </a>
-                    <a href="#" className="hover:text-green-400">
+                    <a href="https://x.com/SaAd96298" className="hover:text-green-400">
                         <BsTwitterX className="text-2xl" />
                     </a>
                 </div>
