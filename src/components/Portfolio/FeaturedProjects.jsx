@@ -66,15 +66,6 @@ const projects = [
         ]
     },
     {
-        image: "https://i.postimg.cc/8kvTpYb7/intro.png",
-        title: "Library Management System",
-        tools: [
-            "Lists",
-            "Dictionaries",
-            "csv",
-        ]
-    },
-    {
         image: "https://i.postimg.cc/W3Bjmmsp/Contact-App.png",
         title: "Contact App with flutter",
         tools: [
@@ -84,11 +75,8 @@ const projects = [
             "Dart packages (e.g., provider, sqflite)",
             "State management (Provider or similar)",
             "Material Design (Flutter widgets)",
-            "TextFormField (for user input forms)",
-            "Navigator (for page transitions)",
             "ListView (for displaying contact list)",
             "Flutter's pubspec.yaml (for dependency management)",
-            "Flutter's App Lifecycle"
         ]
 
     },
@@ -98,7 +86,7 @@ const projects = [
 const FeaturedProjects = () => {
     return (
         <section className="py-16">
-            <div className="max-w-5xl mx-auto px-4">
+            <div className="max-w-5xl px-4">
                 <h2 className="text-4xl font-bold text-accent mb-8">
                     Featured <span className="text-green-500">Projects</span>
                 </h2>

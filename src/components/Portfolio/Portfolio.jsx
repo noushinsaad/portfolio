@@ -4,14 +4,16 @@ import FeaturedProjects from "./FeaturedProjects";
 
 const Portfolio = () => {
     return (
-        <div className="bg-black text-white min-h-screen flex items-center justify-center">
+        <section className="min-h-screen bg-black flex items-center justify-center text-white py-10">
             <div className="max-w-4xl px-4 lg:pl-24">
-                <header className="p-8">
-                    <h1 className="text-2xl uppercase font-bold">Portfolio</h1>
-                </header>
+                <div className="flex justify-between items-center">
+                    <button className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-400 border border-gray-600 rounded-full hover:text-white hover:border-white">
+                         PORTFOLIO
+                    </button>
+                </div>
                 <FeaturedProjects />
             </div>
-        </div>
+        </section>
     );
 };
 

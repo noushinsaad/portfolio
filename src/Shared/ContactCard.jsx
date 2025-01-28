@@ -12,7 +12,8 @@ const ContactCard = () => {
 
     return (
         <div
-            className="lg:fixed lg:top-1/2 lg:left-2 lg:transform lg:-translate-y-1/2 bg-gray-800 text-white w-full lg:w-1/4 p-6 rounded-lg shadow-lg min-h-[400px] mt-4 sm:mt-0 z-50">
+            className="lg:fixed lg:top-1/2 lg:left-2 lg:transform lg:-translate-y-1/2 bg-gray-800 
+            text-white w-full lg:w-1/4 p-6 md:rounded-lg shadow-lg min-h-[400px] sm:mt-0 md:mt-4 z-50">
             {/* Top Section */}
             <div className="flex justify-between items-center mb-6">
                 <h1 className="text-2xl font-bold">Sa&apos;ad</h1>

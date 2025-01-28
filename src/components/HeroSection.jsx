@@ -1,4 +1,16 @@
+import { motion } from "motion/react"
+import './style.css'
+import resume from '../assets/Resume_Md. _Noushin_Islam .pdf'
 
+const onButtonClick = () => {
+    const pdfUrl = resume;
+    const link = document.createElement("a");
+    link.href = pdfUrl;
+    link.download = "ResumeOfNoushin.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+};
 
 const HeroSection = () => {
     return (
@@ -11,10 +23,35 @@ const HeroSection = () => {
                 </button>
 
                 {/* Title */}
-                <h1 className="text-5xl md:text-7xl font-bold leading-snug">
-                    Say Hi from <span className="text-green-400">Sa&apos;ad</span>, <br />
-                    Frontend Designer and Developer
-                </h1>
+                <div className="relative text-5xl md:text-7xl font-bold leading-snug">
+                    Say Hi from
+                    {/* Container for both names */}
+                    <div className="relative">
+                        {/* Nickname Animation with Typewriter Effect */}
+                        <motion.span
+                            className="text-green-400 absolute left-0 top-0 blinking-cursor"
+                            initial={{ opacity: 1, width: "0ch" }}
+                            animate={{ opacity: 1, width: "5ch" }}
+                            transition={{
+                                opacity: { delay: 0, duration: 0.5, repeat: Infinity, repeatDelay: 5 },
+                                width: { delay: 0, duration: 5, ease: "linear", repeat: Infinity, repeatDelay: 5 },
+                            }}
+                            style={{
+                                overflow: "hidden",
+                                whiteSpace: "nowrap",
+                                borderRight: "2px solid #00ff00",
+                                animation: "blink 1s step-end infinite",
+                            }}
+                        >
+                            Sa&apos;ad,
+                        </motion.span>
+                    </div>
+                    <br />
+                    <span className="text-gray-300">
+                        Frontend Designer and Developer
+                    </span>
+                </div>
+
 
                 {/* Description */}
                 <p className="text-gray-400 mt-4 text-lg">
@@ -23,8 +60,7 @@ const HeroSection = () => {
                 </p>
 
                 <a
-                    href="/resume.pdf"
-                    download="My_Resume.pdf"
+                    onClick={onButtonClick}
                     className="text-green-800  btn btn-wide rounded-full mt-6"
                 >
                     Download Resume
