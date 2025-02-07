@@ -1,55 +1,31 @@
+import { useEffect, useState } from "react";
 import ProjectCard from "./ProjectCard";
+import { FaPython, FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJava, FaJsSquare } from "react-icons/fa";
 
-const projects = [
-    {
-        image: "https://i.postimg.cc/kXdqByjf/papertree.png",
-        title: "Author-Paper Ranking",
-        tools: ["Python", "NumPy Library", "Bibliometric Databases", "Ranking Algorithms"],
-        liveLink: "https://www.researchgate.net/profile/Palash_Roy/publication/360815826_A_Study_on_Paper_and_Author_Ranking/links/6601d43cd3a08551424f7170/A-Study-on-Paper-and-Author-Ranking.pdf#",
-        githubLink: "https://github.com/Roy101/Author-Ranking-IEEE-ICIEST"
-    },
-    {
-        image: "https://i.ibb.co.com/DPWWgJ0D/Screenshot-2025-02-07-180649.png",
-        title: "Pet Adoption System",
-        tools: [
-            "React.js", "Firebase Hosting", "Firebase Authentication", "Tailwind CSS", "Vite.js", "Axios/Fetch API", "Node.js",
-            "Tanstack Query"
-        ],
-        liveLink: "https://furever-home-fb49c.web.app/",
-        githubLink: "https://github.com/noushinsaad/pet-adoption-client"
-    },
-    {
-        image: "https://i.postimg.cc/rmnMd6P4/Screenshot-4-1-2025-211637-service-review-7e78b-web-app.jpg",
-        title: "Service Review System",
-        tools: [
-            "React.js", "Firebase Hosting", "Firebase Authentication", "Tailwind CSS", "Vite.js", "Axios/Fetch API", "Node.js"
-        ],
-        liveLink: "https://service-review-7e78b.web.app/",
-        githubLink: "https://github.com/noushinsaad/service-review-client-site"
-    },
-    {
-        image: "https://i.postimg.cc/gJkGkcNd/Screenshot-4-1-2025-211649-movie-portal-b3cb7-web-app.jpg",
-        title: "Movie Portal",
-        tools: [
-            "React.js", "Firebase Hosting", "Firebase Authentication", "Tailwind CSS", "Vite.js", "Axios/Fetch API", "Node.js"
-        ],
-        liveLink: "https://movie-portal-b3cb7.web.app/",
-        githubLink: "https://github.com/noushinsaad/movie-portal-client-site"
-    },
-    {
-        image: "https://i.postimg.cc/pd1Prb7F/lfr.jpg",
-        title: "Line Follower Robot",
-        tools: ["Python", "WeBots", "Matplotlib", "OpenCV", "Numpy", "Robot Simulation", "PID Control", "Line Following Algorithm"],
-        liveLink: "#",
-        githubLink: "https://github.com/noushinsaad/LFR-WeBots"
-    },
+const skills = [
+    { name: 'Python', icon: <FaPython size={40} className="text-green-500" /> },
+    { name: 'React', icon: <FaReact size={40} className="text-green-500" /> },
+    { name: 'Node.js', icon: <FaNodeJs size={40} className="text-green-500" /> },
+    { name: 'HTML', icon: <FaHtml5 size={40} className="text-green-500" /> },
+    { name: 'CSS', icon: <FaCss3Alt size={40} className="text-green-500" /> },
+    { name: 'Java', icon: <FaJava size={40} className="text-green-500" /> },
+    { name: 'JavaScript', icon: <FaJsSquare size={40} className="text-green-500" /> },
 ];
 
 const FeaturedProjects = () => {
+    const [projects, setProjects] = useState([]);
+
+    useEffect(() => {
+        fetch("/projects.json")
+            .then((response) => response.json())
+            .then((data) => setProjects(data))
+            .catch((error) => console.error("Error loading projects:", error));
+    }, []);
+
     return (
         <section className="py-16">
             <div className="max-w-5xl px-4">
-                <h2 className="text-4xl font-bold text-accent mb-8">
+                <h2 className="text-4xl md:text-6xl font-bold mb-8">
                     Featured <span className="text-green-500">Projects</span>
                 </h2>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -61,8 +37,22 @@ const FeaturedProjects = () => {
                             tools={project.tools}
                             liveLink={project.liveLink}
                             githubLink={project.githubLink}
+                            description={project.description}
                         />
                     ))}
+                </div>
+                <div>
+                    <h2 className="text-4xl md:text-6xl font-bold my-8">
+                        <span className="text-green-500">Skilled</span> In
+                    </h2>
+                    <div className="flex flex-wrap gap-8 justify-center">
+                        {skills.map((skill) => (
+                            <div key={skill.name} className="flex flex-col items-center">
+                                {skill.icon}
+                                <span className="mt-2 text-xl">{skill.name}</span>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>

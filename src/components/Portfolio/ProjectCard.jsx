@@ -1,6 +1,11 @@
 /* eslint-disable react/prop-types */
 
-const ProjectCard = ({ image, title, tools, liveLink, githubLink }) => {
+import { useState } from "react";
+import ProjectDetails from "./ProjectDetails";
+
+const ProjectCard = ({ image, title, tools, liveLink, githubLink, description }) => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
     return (
         <div className="bg-slate-700 rounded-lg shadow-md pb-4">
             <div className="border-4 rounded-xl border-t-0 border-red-700">
@@ -35,8 +40,23 @@ const ProjectCard = ({ image, title, tools, liveLink, githubLink }) => {
                     >
                         GitHub
                     </a>
+                    <button
+                        onClick={() => setIsModalOpen(true)}
+                        className="btn btn-accent text-white px-3 py-1 rounded-md text-sm">
+                        View Details
+                    </button>
                 </div>
             </div>
+
+            {isModalOpen && (
+                <ProjectDetails
+                    title={title}
+                    description={description}
+                    githubLink={githubLink}
+                    onClose={() => setIsModalOpen(false)}
+                ></ProjectDetails>
+            )}
+
         </div>
     );
 };

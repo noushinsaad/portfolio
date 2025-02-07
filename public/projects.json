@@ -1,0 +1,81 @@
+[
+    {
+        "image": "https://i.postimg.cc/kXdqByjf/papertree.png",
+        "title": "Author-Paper Ranking",
+        "tools": [
+            "Python",
+            "NumPy Library",
+            "Bibliometric Databases",
+            "Ranking Algorithms"
+        ],
+        "liveLink": "https://www.researchgate.net/profile/Palash_Roy/publication/360815826_A_Study_on_Paper_and_Author_Ranking/links/6601d43cd3a08551424f7170/A-Study-on-Paper-and-Author-Ranking.pdf#",
+        "githubLink": "https://github.com/Roy101/Author-Ranking-IEEE-ICIEST",
+        "description": "As the number of journal issues, conferences and the overall scientific literature have been increasing at an exponential rate, it has become challenging for researchers to find appropriate and useful papers from the vast literature available to them.To solve this issue citation count, h- index, i10 - index are used to rank authors.In 1998, Brin and Page introduced the algorithm PageRank which is also used in the scientific community for ranking research papers and authors.However, each of these metrics has its own drawbacks.We hypothesize that papers unveiling deeper truth are often not as well cited as those that are more challenging for a wider number of authors to assimilate and appreciate their works.So a simple count of the number of citations may fail to capture the essence of the quality of a paper.With a view to addressing this issue, we have introduced a new algorithm that also takes into account the quality of the researcher citing an article, and considers it in ranking.We have carried out experiments.While the experiments are not as comprehensive, results have been incorporated.They loo promising in ranking authors and papers that are not cited too often due to difficulty in understanding them."
+    },
+    {
+        "image": "https://i.ibb.co.com/DPWWgJ0D/Screenshot-2025-02-07-180649.png",
+        "title": "Pet Adoption System",
+        "tools": [
+            "React.js",
+            "Firebase Hosting",
+            "Firebase Authentication",
+            "Tailwind CSS",
+            "Vite.js",
+            "Axios/Fetch API",
+            "Node.js",
+            "Tanstack Query"
+        ],
+        "liveLink": "https://furever-home-fb49c.web.app/",
+        "githubLink": "https://github.com/noushinsaad/pet-adoption-client",
+        "description": "FurEver Home is a pet adoption platform designed to connect pets with loving adopters. It offers features like pet listing, adoption requests, donation campaigns, and an admin dashboard. Users can browse pets, apply for adoption, donate via Stripe, and manage their profiles. Built with React, Tailwind CSS, Node.js, Express.js, and MongoDB, it ensures secure authentication (Firebase, JWT) and a seamless user experience. The platform supports dark mode, infinite scrolling, and dynamic filtering, making pet adoption easy and accessible. \ud83d\ude80\ud83d\udc3e"
+    },
+    {
+        "image": "https://i.postimg.cc/rmnMd6P4/Screenshot-4-1-2025-211637-service-review-7e78b-web-app.jpg",
+        "title": "Service Review System",
+        "tools": [
+            "React.js",
+            "Firebase Hosting",
+            "Firebase Authentication",
+            "Tailwind CSS",
+            "Vite.js",
+            "Axios/Fetch API",
+            "Node.js"
+        ],
+        "liveLink": "https://service-review-7e78b.web.app/",
+        "githubLink": "https://github.com/noushinsaad/service-review-client-site",
+        "description": "Service Review Application is a full-stack platform that allows users to explore, review, and manage various services. It features user authentication, service management, and review functionalities, ensuring a seamless experience. Users can add, update, and delete services, post and manage reviews with ratings, and filter services dynamically. Built with React, Tailwind CSS, Node.js, Express.js, and MongoDB, it incorporates JWT authentication, dynamic page titles, toast notifications, and animations (Framer Motion) for an enhanced user experience. \ud83d\ude80\u2728"
+    },
+    {
+        "image": "https://i.postimg.cc/gJkGkcNd/Screenshot-4-1-2025-211649-movie-portal-b3cb7-web-app.jpg",
+        "title": "Movie Portal",
+        "tools": [
+            "React.js",
+            "Firebase Hosting",
+            "Firebase Authentication",
+            "Tailwind CSS",
+            "Vite.js",
+            "Axios/Fetch API",
+            "Node.js"
+        ],
+        "liveLink": "https://movie-portal-b3cb7.web.app/",
+        "githubLink": "https://github.com/noushinsaad/movie-portal-client-site",
+        "description": "MovieNest is a dynamic movie platform that allows users to explore movies, view detailed information, add new movies, manage favorites, and delete unwanted entries. It features a random movie generator, a search bar for quick discovery, and secure user authentication via email, Google, or Apple. Built with React, Tailwind CSS, Firebase, MongoDB, and Express.js, it ensures a smooth and interactive experience. The platform also integrates SweetAlert2 for notifications and provides a visually appealing UI with DaisyUI. Whether searching for a specific movie or discovering something new, MovieNest enhances the movie-watching experience! \ud83c\udfac\u2728"
+    },
+    {
+        "image": "https://i.postimg.cc/pd1Prb7F/lfr.jpg",
+        "title": "Line Follower Robot",
+        "tools": [
+            "Python",
+            "WeBots",
+            "Matplotlib",
+            "OpenCV",
+            "Numpy",
+            "Robot Simulation",
+            "PID Control",
+            "Line Following Algorithm"
+        ],
+        "liveLink": "#",
+        "githubLink": "https://github.com/noushinsaad/LFR-WeBots",
+        "description": "The Line Following Robot is a Python-based robot simulation developed using Webots. It follows a predefined path using line-following algorithms and employs PID control for smooth navigation. Additionally, the robot features object detection via an onboard camera and can avoid collisions using intelligent obstacle avoidance techniques. Built with OpenCV, NumPy, and Matplotlib, this project simulates real-world autonomous robotic movement and vision-based interaction. \ud83d\ude80\ud83e\udd16"
+    }
+]
