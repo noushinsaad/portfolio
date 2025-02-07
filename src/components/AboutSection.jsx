@@ -18,11 +18,12 @@ const AboutSection = () => {
 
                 {/* Paragraph */}
                 <p className=" text-gray-400 text-sm md:text-lg max-w-2xl">
-                    I am Noushin, graduated from the Computer Science and Engineering Department of BRAC University.
-                    I am passionate about technology and robotics. I am a person who works hard and is enthused, motivated by myself,
-                    dependable, and responsible. I am a responsible team player who can easily adjust to problematic circumstances.
-                    I can operate well both independently and in a collaborative setting. I can stay on task and meet deadlines even
-                    when under pressure.
+                    I am a passionate web developer with a strong command of both front-end and back-end development.
+                    My skill set includes creating responsive user interfaces with React and building powerful server-side
+                    applications with Node.js, Express.js, and MongoDB. Additionally,
+                    I have a solid foundation in Python programming and experience working with Arduino for
+                    robotics and hardware projects. I aim to apply my technical knowledge to meaningful projects,
+                    collaborate with talented teams, and continuously refine my skills to deliver exceptional web solutions.
                 </p>
             </div>
         </section>

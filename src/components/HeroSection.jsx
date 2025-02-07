@@ -25,7 +25,6 @@ const HeroSection = () => {
                 {/* Title */}
                 <div className="relative text-5xl md:text-7xl font-bold leading-snug">
                     Say Hi from
-                    {/* Container for both names */}
                     <div className="relative">
                         {/* Nickname Animation with Typewriter Effect */}
                         <motion.span
