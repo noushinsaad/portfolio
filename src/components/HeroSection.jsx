@@ -1,6 +1,6 @@
 import { motion } from "motion/react"
 import './style.css'
-import resume from '../assets/Resume_Md. _Noushin_Islam .pdf'
+import resume from '../assets/Resume_Md. _Noushin_Islam.pdf'
 
 const onButtonClick = () => {
     const pdfUrl = resume;
