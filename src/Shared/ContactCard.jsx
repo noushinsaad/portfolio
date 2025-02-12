@@ -30,7 +30,25 @@ const ContactCard = () => {
             {/* Contact Info */}
             <div className="text-center">
                 <p className="text-4xl font-medium">Md. Noushin Islam</p>
+                <div className="flex justify-around">
+                    {/* Email */}
+                    <a
+                        href="mailto:noushinshoha@gmail.com"
+                        className="text-sm text-gray-400 hover:text-blue-500 transition-colors"
+                    >
+                        noushinshoha@gmail.com
+                    </a>
+
+                    {/* Phone Number */}
+                    <a
+                        href="tel:+8801983332414"
+                        className="text-sm text-gray-400 hover:text-blue-500 transition-colors"
+                    >
+                        +880 1983 332414
+                    </a>
+                </div>
                 <p className="text-2xl text-gray-400">Dhaka, Bangladesh</p>
+
             </div>
 
             {/* Footer Section */}
