@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 const EducationExperience = () => {
     const education = [
         {
@@ -45,47 +47,74 @@ const EducationExperience = () => {
     ];
 
     return (
-        <section className="min-h-screen bg-neutral flex items-center justify-center text-white py-10">
-            <div className="flex flex-col gap-12 max-w-4xl px-4 lg:pl-24">
+        <section className="min-h-screen bg-neutral flex items-center justify-center text-white py-10 relative overflow-hidden">
+            {/* Background Gradient */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black via-green-900/10 to-black z-0"></div>
+
+            <div className="flex flex-col gap-12 max-w-4xl px-4 lg:pl-24 z-10">
                 {/* Header */}
-                <div className="flex justify-between items-center">
-                    <button className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-400 border border-gray-600 rounded-full hover:text-white hover:border-white">
+                <motion.div
+                    initial={{ opacity: 0, y: -20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                    viewport={{ once: true }}
+                    className="flex justify-between items-center"
+                >
+                    <button className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-400 border border-gray-600 rounded-full hover:text-white hover:border-white transition-all duration-300">
                         <span>📄</span> RESUME
                     </button>
-                </div>
+                </motion.div>
 
                 {/* Title */}
-                <h1 className="text-4xl md:text-6xl font-bold">
+                <motion.h1
+                    initial={{ opacity: 0, y: -20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.4 }}
+                    viewport={{ once: true }}
+                    className="text-4xl md:text-6xl font-bold"
+                >
                     Education & <span className="text-green-400">Experience</span>
-                </h1>
+                </motion.h1>
 
                 {/* Content */}
                 <div className="flex flex-col lg:flex-row gap-12">
                     {/* Education Section */}
-                    <div className="flex-1">
+                    <motion.div
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6, delay: 0.6 }}
+                        viewport={{ once: true }}
+                        className="flex-1"
+                    >
                         <h2 className="text-3xl font-bold mb-6">Education</h2>
                         <ul className="space-y-6">
                             {education.map((edu, index) => (
-                                <li key={index}>
+                                <li key={index} className="bg-gray-800 p-6 rounded-lg shadow-lg">
                                     <h3 className="text-xl font-semibold">{edu.title}</h3>
-                                    <p className="text-gray-400">{edu.institution}</p>
-                                    <p className="text-sm text-gray-500">{edu.duration}</p>
-                                    <p className="text-sm">{edu.details}</p>
+                                    <p className="text-gray-400 mt-2">{edu.institution}</p>
+                                    <p className="text-sm text-gray-500 mt-1">{edu.duration}</p>
+                                    <p className="text-sm text-gray-300 mt-2">{edu.details}</p>
                                 </li>
                             ))}
                         </ul>
-                    </div>
+                    </motion.div>
 
                     {/* Experience Section */}
-                    <div className="flex-1">
+                    <motion.div
+                        initial={{ opacity: 0, x: 20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6, delay: 0.8 }}
+                        viewport={{ once: true }}
+                        className="flex-1"
+                    >
                         <h2 className="text-3xl font-bold mb-6">Experience</h2>
                         <ul className="space-y-6">
                             {experience.map((exp, index) => (
-                                <li key={index}>
+                                <li key={index} className="bg-gray-800 p-6 rounded-lg shadow-lg">
                                     <h3 className="text-xl font-semibold">{exp.title}</h3>
-                                    <p className="text-gray-400">{exp.organization}</p>
-                                    <p className="text-sm text-gray-500">{exp.duration}</p>
-                                    <p className="text-sm text-gray-400">{exp.location}</p>
+                                    <p className="text-gray-400 mt-2">{exp.organization}</p>
+                                    <p className="text-sm text-gray-500 mt-1">{exp.duration}</p>
+                                    <p className="text-sm text-gray-400 mt-1">{exp.location}</p>
                                     <ul className="list-disc list-inside text-sm mt-2 text-gray-400">
                                         {exp.details.map((detail, i) => (
                                             <li key={i}>{detail}</li>
@@ -94,8 +123,30 @@ const EducationExperience = () => {
                                 </li>
                             ))}
                         </ul>
-                    </div>
+                    </motion.div>
                 </div>
+            </div>
+
+            {/* Floating Circles Animation */}
+            <div className="absolute inset-0 overflow-hidden z-0">
+                {[...Array(10)].map((_, index) => (
+                    <motion.div
+                        key={index}
+                        initial={{ y: 0, x: Math.random() * 100 - 50, opacity: 0 }}
+                        animate={{ y: "100vh", opacity: [0, 1, 0] }}
+                        transition={{
+                            duration: Math.random() * 5 + 5,
+                            repeat: Infinity,
+                            delay: Math.random() * 2,
+                            ease: "linear",
+                        }}
+                        className="absolute w-4 h-4 bg-green-400 rounded-full"
+                        style={{
+                            left: `${Math.random() * 100}%`,
+                            top: `${Math.random() * 100}%`,
+                        }}
+                    ></motion.div>
+                ))}
             </div>
         </section>
     );
